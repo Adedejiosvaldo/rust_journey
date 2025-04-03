@@ -48,8 +48,12 @@ fn main() {
     // println!("a: {}, b: {}, c: {}", a, b, c);
 
     // functions
+    // print!("{}", is_even(3));
 
-    print!("{}", is_even(3));
+    // mutability
+    // if we want to have a changable variable, use mut
+    let mut num: i8 = 3;
+    num = 5;
 }
 
 pub fn is_even(num: u8) -> bool {
