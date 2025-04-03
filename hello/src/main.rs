@@ -51,9 +51,21 @@ fn main() {
     // print!("{}", is_even(3));
 
     // mutability
-    // if we want to have a changable variable, use mut
-    let mut num: i8 = 3;
-    num = 5;
+    // // if we want to have a changable variable, use mut
+    // let mut num: i8 = 3;
+    // num = 5;
+
+    // arrays, borrowing and refercning
+    // slice is a subset of an array
+
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // a slice
+    // & is a way to reference the original array
+    //  and borrow it
+    // slice from index 1.4
+    let slice = &arr[0..4];
+    print!("{:?}", slice);
 }
 
 pub fn is_even(num: u8) -> bool {
