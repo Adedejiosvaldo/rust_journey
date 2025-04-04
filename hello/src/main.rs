@@ -66,6 +66,21 @@ fn main() {
     // slice from index 1.4
     let slice = &arr[0..4];
     print!("{:?}", slice);
+
+    // strings
+    let str: &str = "hello word";
+    let string: String = String::from("Hello worlds");
+
+
+    // flow controls
+    let n =3
+    if n >0 {
+        println!("n is positive");
+    } else if n < 0 {
+        println!("n is negative");
+    } else {
+        println!("n is zero");
+    }
 }
 
 pub fn is_even(num: u8) -> bool {
