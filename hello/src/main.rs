@@ -71,15 +71,23 @@ fn main() {
     let str: &str = "hello word";
     let string: String = String::from("Hello worlds");
 
-
     // flow controls
-    let n =3
-    if n >0 {
+    let n = 3;
+    if n > 0 {
         println!("n is positive");
     } else if n < 0 {
         println!("n is negative");
     } else {
         println!("n is zero");
+    }
+
+    // for loop
+    for i in 0..100 {
+        if i % 2 == 0 {
+            println!("Even number loop {}", i);
+        }
+
+        println!("Number {} ", i);
     }
 }
 
