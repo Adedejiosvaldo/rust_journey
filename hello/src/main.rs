@@ -65,7 +65,7 @@ fn main() {
     //  and borrow it
     // slice from index 1.4
     let slice = &arr[0..4];
-    print!("{:?}", slice);
+    // print!("{:?}", slice);
 
     // strings
     // let str: &str = "hello word";
@@ -103,15 +103,43 @@ fn main() {
     // }
 
     //  match - switch
-    let n: i32 = 3;
-    match n {
-        0 => println!("n is zero"),
-        1 | 2 => println!("n is one or two"),
-        3..=4 => println!("n is three or four"),
-        _ => println!("n is something else"),
+    // let n: i32 = 3;
+    // match n {
+    //     0 => println!("n is zero"),
+    //     1 | 2 => println!("n is one or two"),
+    //     3..=4 => println!("n is three or four"),
+    //     _ => println!("n is something else"),
+    // }
+
+    // structs
+    let make = String::from("Toyota");
+    let model = String::from("Corolla");
+    let car: Car = Car {
+        make,
+        model: model,
+        year: 2020,
+    };
+
+    car.return_car_info();
+}
+// struct information -> like a class
+struct Car {
+    make: String,
+    model: String,
+    year: u16,
+}
+
+// adding method to the struct class
+impl Car {
+    fn return_car_info(&self) {
+        println!(
+            "Car make: {}, model: {}, year: {}",
+            self.make, self.model, self.year
+        );
     }
 }
 
+// function
 pub fn is_even(num: u8) -> bool {
     let digit: u8 = num % 2;
     // return statement does not need ;
