@@ -121,6 +121,7 @@ fn main() {
     };
 
     car.return_car_info();
+    println!("{}", car.miles_per_gallon())
 }
 // struct information -> like a class
 struct Car {
@@ -136,6 +137,23 @@ impl Car {
             "Car make: {}, model: {}, year: {}",
             self.make, self.model, self.year
         );
+    }
+}
+
+// Trait / INterface
+
+// Addind the interface to the class that would use it
+impl Cars for Car {
+    fn miles_per_gallon(&self) -> f32 {
+        // 20 miles per gallon
+        20.0
+    }
+}
+
+trait Cars {
+    fn miles_per_gallon(&self) -> f32;
+    fn is_small_car(&self) -> bool {
+        true
     }
 }
 
