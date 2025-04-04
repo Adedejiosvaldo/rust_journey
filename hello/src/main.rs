@@ -92,14 +92,23 @@ fn main() {
 
     // while loop
     // we add in mut to make it mutable
-    let mut i: u8 = 4;
-    while i < 10 {
-        println!("i is {}", i);
-        // increment
-        i += 1;
-        if i == 9 {
-            break;
-        }
+    // let mut i: u8 = 4;
+    // while i < 10 {
+    //     println!("i is {}", i);
+    //     // increment
+    //     i += 1;
+    //     if i == 9 {
+    //         break;
+    //     }
+    // }
+
+    //  match - switch
+    let n: i32 = 3;
+    match n {
+        0 => println!("n is zero"),
+        1 | 2 => println!("n is one or two"),
+        3..=4 => println!("n is three or four"),
+        _ => println!("n is something else"),
     }
 }
 
