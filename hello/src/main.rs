@@ -68,26 +68,38 @@ fn main() {
     print!("{:?}", slice);
 
     // strings
-    let str: &str = "hello word";
-    let string: String = String::from("Hello worlds");
+    // let str: &str = "hello word";
+    // let string: String = String::from("Hello worlds");
 
     // flow controls
-    let n = 3;
-    if n > 0 {
-        println!("n is positive");
-    } else if n < 0 {
-        println!("n is negative");
-    } else {
-        println!("n is zero");
-    }
+    // let n = 3;
+    // if n > 0 {
+    //     println!("n is positive");
+    // } else if n < 0 {
+    //     println!("n is negative");
+    // } else {
+    //     println!("n is zero");
+    // }
 
     // for loop
-    for i in 0..100 {
-        if i % 2 == 0 {
-            println!("Even number loop {}", i);
-        }
+    // for i in 0..100 {
+    //     if i % 2 == 0 {
+    //         println!("Even number loop {}", i);
+    //     }
 
-        println!("Number {} ", i);
+    //     println!("Number {} ", i);
+    // }
+
+    // while loop
+    // we add in mut to make it mutable
+    let mut i: u8 = 4;
+    while i < 10 {
+        println!("i is {}", i);
+        // increment
+        i += 1;
+        if i == 9 {
+            break;
+        }
     }
 }
 
